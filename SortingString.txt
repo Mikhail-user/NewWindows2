@@ -1,0 +1,24 @@
+﻿public class SortingString {
+    public static void main(String[]args){
+        char ch;
+        String a = "I love java and programming";
+        char [] b = new char[a.length()];
+        System.out.println(b.length);
+        for(int i = 0; i < b.length; i++){
+            b[i] = a.charAt(i);
+            System.out.print(b[i]);
+        }
+        for(int j=0, l=0; j<b.length-l; j++,l++) {
+            for (int i = 0; i < b.length - 1; i++) {
+                if (b[i] > b[i + 1]) {
+                    ch = b[i];
+                    b[i] = b[i + 1];
+                    b[i + 1] = ch;
+                }
+            }
+        }
+        System.out.println();
+        String s = new String(b);
+        System.out.println(s);
+    }
+}
